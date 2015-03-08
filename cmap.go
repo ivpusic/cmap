@@ -1,6 +1,6 @@
+// Map with convenient methods for getting and setting values
 package cmap
 
-// Convinient way of passing configuration
 type C map[string]interface{}
 
 // Get value as string
