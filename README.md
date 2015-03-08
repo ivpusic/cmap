@@ -4,6 +4,11 @@
 
 Map with convenient methods for getting and setting values
 
+# Installation
+```
+go get github.com/ivpusic/cmap
+```
+
 #Why?
 Because checking if key in map exists, setting it to default value, and converting it to right type can be....yeah, annoying. 
 ## Example
