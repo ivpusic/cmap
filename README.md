@@ -11,14 +11,16 @@ Map with convenient methods for getting and setting values
 ParseConfig(cmap.C{
   "key1": "bla",
   "key2": 456,
+  "key3": "bla",
 })
 
 // parse config
 func ParseConfig(conf cmap.C) {
-  	// get string value on key `key1` or return default value (`some default` in this case)
 	setting1 := conf.StrOrDef("key1", "some default")
-	// the same, just getting int
+	
 	setting2 := conf.IntOrDef("key2", 1234)
+	
+	setting3 := conf.Str("key3")
 }
 ```
 
