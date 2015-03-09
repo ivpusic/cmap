@@ -3,34 +3,9 @@
 [![GoDoc](https://godoc.org/github.com/ivpusic/cmap?status.svg)](https://godoc.org/github.com/ivpusic/cmap)
 
 Map with convenient methods for getting and setting values
-#Why?
-Because checking if key in map exists, setting it to default value, and converting it to right type can be....yeah, annoying. 
+
 ## Example
-### Classical way
-```Go
-// pass config
-conf := make(map[string]interface{})
-conf["key1"] = "some value"
-conf["key2"] = 5678
-ParseConfig(conf)
 
-// parse config
-func ParseConfig(conf map[string]interface{}) {
-	// default value
-	setting1 := "some default"
-	if val, ok := conf["key1"]; ok {
-		setting1 = val.(string)
-	}
-
-	// default value
-	setting2 := 1234
-	if val, ok := conf["key2"]; ok {
-		setting2 = val.(int)
-	}
-}
-```
-
-### ``cmap`` way
 ```Go
 // pass config
 ParseConfig(cmap.C{
